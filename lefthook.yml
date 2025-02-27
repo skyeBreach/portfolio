@@ -1,0 +1,16 @@
+pre-commit:
+  piped: true
+  jobs:
+    - name: lint
+      group:
+        piped: false
+        parallel: true
+        jobs:
+          - name: spellcheck
+            run: typos --write-changes {staged_files}
+            stage_fixed: true
+commit-msg:
+  parallel: true
+  scripts:
+    commitlint.sh:
+      runner: "bash"

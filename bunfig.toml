@@ -1,0 +1,65 @@
+## ------------------------------------------------------------------------------------------------------------------ ##
+## Runtime
+
+## Script files to run prior to calling `bun run` on a file or script
+## files that register plugins should be added to this list
+# preload = []
+
+## Reduce memory usage at the cost of performance
+smol = true
+
+## ------------------------------------------------------------------------------------------------------------------ ##
+## Debugging
+
+## Manually default the log level to 'debug' when we are in development
+logLevel = "debug"
+
+## Enable or disable Bun's analytics recording. When active Bun records our bundle timings and feature usage.
+telemetry = false
+
+## ------------------------------------------------------------------------------------------------------------------ ##
+## Package Management
+
+[install]
+
+## By default we want to disable `production` mode so the `devDependencies` are installed
+production = false
+
+## Force bun to use the text based `.lock` file no matter the version we are on
+saveTextLockfile = true
+
+## ------------------------------------------------------------------------------------------------------------------ ##
+## Test Runner
+
+[test]
+
+## Defines the folder to run tests from when using the bun test runner
+root = "./tests"
+
+## Define the scripts we need to run prior to tests being called
+# preload = []
+
+## Reduce memory usage at the cost of performance, only applies to the bun test runner
+smol = false
+
+## Enables coverage reporting
+coverage = false
+
+## Set path where coverage reports will be saved
+coverageDir = "./.coverage"
+
+## ------------------------------------------------------------------------------------------------------------------ ##
+## Run Command Settings
+
+[run]
+
+## Force bun to use the system shell even on windows
+shell = "system"
+
+## Auto alias node to bun
+bun = true
+
+## suppress the output of the command being run when using the commands `bun` or `bun run`
+silent = true
+
+## ------------------------------------------------------------------------------------------------------------------ ##

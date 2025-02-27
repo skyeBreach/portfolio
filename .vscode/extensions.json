@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "EditorConfig.EditorConfig",
+        "oven.bun-vscode",
+        "biomejs.biome",
+        "DavidAnson.vscode-markdownlint",
+        "foxundermoon.shell-format",
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    /* #region Formatting */
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome",
+    "[shellscript][ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    /* #endregion */
+
+    /* #region File Associations and Schema */
+    "files.associations": {
+        ".markdownlint.json": "jsonc",
+        ".**ignore": "ignore"
+    },
+    /* #endregion */
+}
