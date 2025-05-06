@@ -40,7 +40,7 @@
         <!-- TODO: Set the correct link -->
         <!-- Github Stars Badge -->
         <a
-            href=""
+            href="https://github.com/skyeBreach/portfolio/stargazers"
         ><img
             alt="GitHub Stars Badge"
             src="https://flat.badgen.net/github/stars/skyeBreach/portfolio"
