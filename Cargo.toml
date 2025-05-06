@@ -1,5 +1,5 @@
 [package]
-name = "portfolio"
+name = "terminal_portfolio"
 authors = [ "skyeBreach <skyebreach@protonmail.com>" ]
 version = "0.1.0"
 edition = "2021"
@@ -46,7 +46,7 @@ codegen-units = 1
 panic = "abort"
 
 [package.metadata.leptos]
-output-name = "portfolio"
+output-name = "terminal_portfolio"
 
 # The site root folder is where cargo-leptos generate all output. WARNING: all content of this folder will be erased on a rebuild. Use it in your server setup.
 site-root = "target/site"
