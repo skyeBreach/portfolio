@@ -37,7 +37,6 @@
             alt="License Badge"
             src="https://flat.badgen.net/github/license/skyeBreach/portfolio"
         ></a>
-        <!-- TODO: Set the correct link -->
         <!-- Github Stars Badge -->
         <a
             href="https://github.com/skyeBreach/portfolio/stargazers"

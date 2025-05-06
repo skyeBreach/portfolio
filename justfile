@@ -18,7 +18,7 @@ docker_image := "terminal_portfolio"
 # Command-Line Helpers
 
 # Helper terminal command prefix to allow for easy just recipe calling
-# This is required as Just doesnt nativuly allow recipes to call other recipes with dep
+# This is required as Just doesnt natively allow recipes to call other recipes with dep
 call_recipe := just_executable() + " --justfile=" + justfile()
 
 # ================================================================================================ #
