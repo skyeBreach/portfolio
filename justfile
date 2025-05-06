@@ -7,8 +7,12 @@ set shell := ["zsh", "-cu"]
 
 project_path := justfile_directory()
 
-# Important Project Paths
+# Project Paths
 dir_scripts := project_path/"scripts"
+
+# Docker Variables
+docker_username := "skyebreach"
+docker_image := "terminal_portfolio"
 
 # ================================================================================================ #
 # Command-Line Helpers
@@ -40,5 +44,26 @@ _default: help
 [group("build")]
 @dev:
     cargo leptos watch --hot-reload
+
+# ================================================================================================ #
+# Docker
+
+# Builds the tagged project docker image
+[group("deploy")]
+@docker-build tag="latest" +args="":
+    echo "{{BOLD}}Building Docker Image: {{docker_username}}/{{docker_image}}{{NORMAL}}"
+    docker build -t {{docker_username}}/{{docker_image}}:{{tag}} . {{args}}
+
+# Push the built tagged project docker image
+[group("deploy")]
+@docker-push tag="latest" +args="":
+    echo "{{BOLD}}Pushing Docker Image: {{docker_username}}/{{docker_image}}{{NORMAL}}"
+    docker push {{docker_username}}/{{docker_image}}:{{tag}} {{args}}
+
+# Rebuilds and pushes the tagged docker image
+[group("deploy")]
+@docker-repush tag="latest" +build-args="":
+    {{call_recipe}} docker-build {{tag}} {{build-args}}
+    {{call_recipe}} docker-push
 
 # ================================================================================================ #
