@@ -1,0 +1,22 @@
+name: terminal_portfolio
+
+x-env: &env
+  env_file:
+    - path: .env
+      required: true
+
+services:
+  app:
+    <<: *env
+    container_name: site
+    image: skyebreach/terminal_portfolio
+    restart: unless-stopped
+    ports:
+      - "${PORTFOLIO_PORT}:8080"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
+
